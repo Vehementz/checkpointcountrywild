@@ -1,19 +1,24 @@
 import React from 'react'
 import { useQuery } from '@apollo/client';
 import { GET_ALL_CONTINENTS } from '../../graphql/queries';
-import styles from  "./Continent.module.scss";
+import { Link } from 'react-router-dom';
+import styles from "./Continent.module.scss";
+
 
 
 const Continent = () => {
   const { loading, error, data } = useQuery(GET_ALL_CONTINENTS);
+
+
+  if(data) {
+    console.log("data", data);
+  }
 
   if (loading) {
     return <p>Loading...</p>;
   }
 
   if (error) {
-
-
     return <p>Error occurred while fetching data.</p>;
   }
 
@@ -24,7 +29,9 @@ const Continent = () => {
       <h1>Continents</h1>
       <ul className={styles.list}>
         {continents.map((continent) => (
-          <li key={continent.code} className={styles.item}>{continent.name}</li>
+          <Link to={`/countries/${continent.code}`}>
+            <li key={continent.code} className={styles.item}>{continent.name}</li>
+          </Link>
         ))}
       </ul>
     </div>
