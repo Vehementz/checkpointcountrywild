@@ -50,7 +50,7 @@ function Countries() {
         {countries.map((country: any) => (
           <li key={country.code} className={styles.item}>
             <p>{country.emoji}</p>
-            <Link to={`/countries/${country.code}`}>{country.name}</Link>
+            <Link to={`/country/${country.code}`}>{country.name}</Link>
           </li>
         ))}
       </ul>

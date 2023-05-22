@@ -25,3 +25,23 @@ query GetAllContinents {
 
 
 
+
+export const GET_COUNTRY_DETAILS = gql`
+  query GetCountryDetails($code: ID!) {
+    country(code: $code) {
+      code
+      name
+      native
+      phone
+      capital
+      currency
+      emoji
+  
+
+    }
+  }
+`;
+
+
+      // continent
+      // states
