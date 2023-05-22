@@ -25,8 +25,8 @@ const Continent = () => {
   const continents = data.continents;
 
   return (
-    <div>
-      <h1>Continents</h1>
+    <div className={styles.page}>
+      <h1 className={styles.title}>Continents</h1>
       <ul className={styles.list}>
         {continents.map((continent) => (
           <Link to={`/countries/${continent.code}`}>

@@ -27,7 +27,7 @@ function Countries() {
 
 
   if (data) {
-    console.log("data", data.continent.countries);
+    console.log("data", data);
   }
 
   if (loading) {
@@ -44,8 +44,8 @@ function Countries() {
 
 
   return (
-    <div>
-      <h1>Countries</h1>
+    <div className={styles.page}>
+      <h1 className={styles.title}>Countries</h1>
       <ul className={styles.list}>
         {countries.map((country: any) => (
           <li key={country.code} className={styles.item}>
