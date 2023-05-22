@@ -1,0 +1,15 @@
+.list {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    
+}
+
+.item {
+    width: 14rem;
+    height: 8rem;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
