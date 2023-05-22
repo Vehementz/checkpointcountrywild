@@ -7,6 +7,20 @@
     justify-content: center;
 }
 
+.filterBox {
+    display: flex;
+    justify-content: center;
+    margin: 3rem;
+
+    input {
+        padding: 1rem;
+        font-size: 17px;
+    }
+
+}
+
+
+
 
 .title {
     text-align: center;
